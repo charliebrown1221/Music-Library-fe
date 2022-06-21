@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
+import MusicTable from './components/MusicTable';
 
 function App() {
 
@@ -8,13 +9,13 @@ function App() {
 
        
     useEffect(()=>{
-      getAllsongs();
+      getAllSongs();
     },[])
 
-    async function getAllsongs() {
+    async function getAllSongs() {
       let response = await axios.get('http://127.0.0.1:8000/song/')
       setSongs(response.data)
-      console.log(response)
+      console.log(response.data)
     }
 
 
@@ -22,13 +23,14 @@ function App() {
 
 
   return (
-    <div>
-      <header >
-        hellooo
-        
-      </header>
+  <div>
+    <MusicTable songs = {songs}/>
+    
+    
     </div>
   );
 }
 
 export default App;
+
+
