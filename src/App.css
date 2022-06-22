@@ -1,0 +1,23 @@
+.nav{
+    padding-top: 50px;
+    margin-bottom: .5em;
+    padding-left: 20px;
+    background-color: rgba(148, 148, 148, 0.593);
+    width: 100%;
+    height: -100px;
+    font-size: 300%;
+}
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid ;
+    table-layout: auto;
+  }
+  .search-bar{
+    margin-right: 100in;
+  }
+  .test{
+    width: 50%;
+  
+  }

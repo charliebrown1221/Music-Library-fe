@@ -2,6 +2,11 @@ import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import MusicTable from './components/MusicTable';
 import SearchBar from  './components/SearchBar';
+import AddSong from './components/AddSong';
+import NavigationBar from './components/NavigationBar';
+import './App.css'
+
+
 
 function App() {
 
@@ -18,22 +23,26 @@ function App() {
       setSongs(response.data)
       console.log(response.data)
     }
-    async function createSong(newSong)
-    let response = await axios.post('http://127.0.0.1:8000/song/', newSong)
-    if (response.status===201){
-      await getAllSongs
+    async function createSong(newSong){
+      let response = await axios.post('http://127.0.0.1:8000/song/', newSong)
+      if (response.status===201){
+        getAllSongs()
+      }
     }
-
 
 
 
 
   return (
   <div>
-  <div>
+    <div className='nav'>
+    <NavigationBar />
+    </div>
+    <AddSong createSong={createSong}/>
+  <div className=''>
     <MusicTable songs = {songs}/>
   </div>
-  <div>
+  <div className='search-bar'>
     <SearchBar setSongs= {setSongs}songs = {songs}/>
   </div>
    </div>

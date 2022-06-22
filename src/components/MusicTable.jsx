@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Table.css'
 
 
 
@@ -8,7 +8,7 @@ const MusicTable = (props) => {
 
 
     return ( 
-        <table>
+        <table className='styled-table '>
         <thead>
          <tr>
            <th>Title</th>

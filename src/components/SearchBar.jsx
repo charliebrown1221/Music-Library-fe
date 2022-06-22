@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Table.css'
 
 const SearchBar = (props) => {
     const [fSong, setFSong]=useState('')
@@ -24,10 +24,11 @@ const SearchBar = (props) => {
     return (
         
        <form onSubmit={handelFilter}>
-        <div> 
+        <div className='search-bar'> 
       <input type='text' value={fSong} onChange={(event)=> setFSong(event.target.value)} ></input>
-      </div>
-      <button type='submit'>Search</button>
+      
+      <button className='button' type='submit' placeholder='What song are you looking for'>Search</button>
+        </div>
         </form>
      );
 }
