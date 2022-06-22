@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import axios from 'axios';
 import MusicTable from './components/MusicTable';
+import SearchBar from  './components/SearchBar';
 
 function App() {
 
@@ -24,10 +25,13 @@ function App() {
 
   return (
   <div>
+  <div>
     <MusicTable songs = {songs}/>
-    
-    
-    </div>
+  </div>
+  <div>
+    <SearchBar  songs = {songs}/>
+  </div>
+   </div>
   );
 }
 
