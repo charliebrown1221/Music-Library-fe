@@ -18,6 +18,11 @@ function App() {
       setSongs(response.data)
       console.log(response.data)
     }
+    async function createSong(newSong)
+    let response = await axios.post('http://127.0.0.1:8000/song/', newSong)
+    if (response.status===201){
+      await getAllSongs
+    }
 
 
 
@@ -29,7 +34,7 @@ function App() {
     <MusicTable songs = {songs}/>
   </div>
   <div>
-    <SearchBar  songs = {songs}/>
+    <SearchBar setSongs= {setSongs}songs = {songs}/>
   </div>
    </div>
   );

@@ -1,8 +1,14 @@
+import React, { useState } from 'react';
+
+
+
 
 
 const MusicTable = (props) => {
+
+
     return ( 
-        <table className="table">
+        <table>
         <thead>
          <tr>
            <th>Title</th>

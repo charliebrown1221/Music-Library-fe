@@ -8,19 +8,14 @@ const SearchBar = (props) => {
       let  results = data.filter((item)  => {
           if (item.title === fSong||item.artist === fSong||item.album === fSong||item.genre === fSong||item.release_date === fSong) {
               return true;}
-         
-         
-         
-      })
+      }
+      )
       console.log("filtered song data", results)
-      return results;
-      
-    }
-      
+      props.setSongs(results)
+      return results;    
+    } 
       function handelFilter(event){
         event.preventDefault();
-  
-        console.log();
         FilterSong(props.songs)
     
       
