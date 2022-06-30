@@ -38,7 +38,9 @@ function App() {
     <div className='nav'>
     <NavigationBar />
     </div>
+    <div className='add'>
     <AddSong createSong={createSong}/>
+    </div>
   <div className=''>
     <MusicTable songs = {songs}/>
   </div>
